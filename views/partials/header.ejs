@@ -10,7 +10,11 @@
 <body>
   <nav>
     <% if (user) { %>
+      |
       <a href="/logout">LOG OUT</a>
+      |
+      <a href="/posts/new">CREATE POST</a>
+      |
     <% } else { %>
       <a href="/auth/google" class="login">LOG IN&nbsp;</a>
     <% } %>
