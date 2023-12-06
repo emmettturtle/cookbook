@@ -1,0 +1,33 @@
+<%- include('../partials/header') %>
+
+<div class="post-user-info"><img alt="avatar" src="<%= post.userAvatar %>" referrerpolicy="no-referrer" ><%= post.userName %></div>
+<br><br>
+<img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Post image">
+<br><br>
+<div class="description"><%= post.description %></div>
+
+<br><br>
+<h3>Comments</h3>
+<% if(post.comments){ %>
+    <% post.comments.forEach(function(comment){ %>
+        <div class = 'comment'>
+            <div class="comment-user-info"><img alt="avatar" src="<%= comment.userAvatar %>" referrerpolicy="no-referrer" ><%= comment.userName %></div>
+            <br>
+            <p><%= comment.content %></p>
+        </div>
+        <br><br>
+    <%  }); %>
+<% } else { %>
+    <h5>no comments yet</h5>
+<% } %>
+
+<% if (user) { %>
+    <form id="add-comment-form" method="POST" action="/posts/<%= post._id %>/comments">
+        <label>Comment:</label>
+        <textarea name="content"></textarea>
+        <input type="submit" value="Post Comment">
+    </form>
+<% } %>
+
+
+<%- include('../partials/footer') %>

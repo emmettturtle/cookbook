@@ -3,7 +3,13 @@ const Post = require('../models/post');
 module.exports = {
     index,
     new: newPost,
-    create
+    create,
+    show
+}
+
+async function show(req, res) {
+    const post = await Post.findById(req.params.id);
+    res.render('posts/show', { title: 'Post Details', post });
 }
 
 async function create(req, res) {
