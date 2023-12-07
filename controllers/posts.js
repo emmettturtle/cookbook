@@ -5,7 +5,26 @@ module.exports = {
     new: newPost,
     create,
     show,
-    delete: deletePost
+    delete: deletePost,
+    update
+}
+
+//not working and I dont know why
+
+async function update(req, res) {
+    const post = await Post.findById(req.params.id);
+    //if they had already liked the post, remove them from the likes
+    //otherwise add them to the likes
+    console.log('GETTING HERE 1');
+    
+    const idIdx = post.usersLiked.findIndex(userId => userId.equals(req.user._id));
+    if(idIdx >= 0) { // findIndex returns -1 if it cant find anything that matches the callback conditional
+        post.usersLiked.splice(idIdx, 1);  
+    } else {
+        post.usersLiked.push(req.user._id);
+    }
+    await post.save();
+    res.redirect(`/posts/${post._id}`);
 }
 
 async function deletePost(req, res) {

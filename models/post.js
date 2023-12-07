@@ -21,6 +21,10 @@ const commentSchema = new Schema({
 const postSchema = new Schema({
     description: { type: String },
     comments: [commentSchema],
+    usersLiked: [{
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    }],
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',

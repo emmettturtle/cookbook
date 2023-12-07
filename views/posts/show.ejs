@@ -3,8 +3,19 @@
 <div class="post-user-info"><img alt="avatar" src="<%= post.userAvatar %>" referrerpolicy="no-referrer" ><%= post.userName %></div>
 <br><br>
 <img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Post image">
-<br><br>
+<br>
+<% if(user) { %>
+    <form action="/posts/<%= post._id %>?_method=PUT" method="POST">
+        <% if(post.usersLiked.some(userId => userId.equals(user._id))) {%>
+            <button type="submit">DISLIKE</button>
+        <% } else { %>
+            <button type="submit">LIKE</button>
+        <% } %>
+    </form>
+<% } %>
+<br>
 <div class="description"><%= post.description %></div>
+
 
 <% if (user?._id.equals(post.user)) { %>
     <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">

@@ -11,6 +11,8 @@ router.get('/:id', postsCtrl.show);
 
 router.delete('/:id', ensureLoggedIn, postsCtrl.delete);
 
+router.put('/:id', ensureLoggedIn, postsCtrl.update);
+
 router.post('/', ensureLoggedIn, postsCtrl.create);
 
 
