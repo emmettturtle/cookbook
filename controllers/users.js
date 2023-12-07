@@ -7,7 +7,9 @@ module.exports = {
 }
 
 async function index(req, res) {
-    res.render('users/index', { title: 'Search For a Profile' });
+    console.log(req.body.username);
+    const matchingUser = await User.find({ name: req.query.username });
+    res.render('users/index', { title: 'Search For a Profile', matchingUser });
 }
 
 async function show(req, res) {

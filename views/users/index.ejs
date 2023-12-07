@@ -5,4 +5,13 @@
     <button type="submit">search</button>
 </form>
 
+<br><br>
+<h3>Results</h3>
+<% if(matchingUser?.length) { %>
+    <div class="profile-page-user-info"><img alt="avatar" src="<%= matchingUser[0].avatar %>" referrerpolicy="no-referrer" ><%= matchingUser[0].name %></div>
+    <a href="/users/<%= matchingUser[0]._id %>">View Profile</a>
+<% } else { %>
+    <h5>No users by that name please try again...</h5>
+<% } %>
+
 <%- include('../partials/footer') %>

@@ -9,9 +9,9 @@
 </head>
 <body>
   <nav>
+    |
+    <a href="/posts">HOME</a>
     <% if (user) { %>
-      |
-      <a href="/logout">LOG OUT</a>
       |
       <a href="/posts/new">CREATE POST</a>
       |
@@ -19,8 +19,12 @@
       |
       <a href="/users">FIND PROFILE</a>
       |
+      <a href="/logout">LOG OUT</a>
+      |
     <% } else { %>
+      |
       <a href="/auth/google" class="login">LOG IN&nbsp;</a>
+      |
     <% } %>
   </nav>
   <main>
