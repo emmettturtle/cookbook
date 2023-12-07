@@ -4,7 +4,13 @@ module.exports = {
     index,
     new: newPost,
     create,
-    show
+    show,
+    delete: deletePost
+}
+
+async function deletePost(req, res) {
+    await Post.findByIdAndDelete(req.params.id);
+    res.redirect('/');
 }
 
 async function show(req, res) {

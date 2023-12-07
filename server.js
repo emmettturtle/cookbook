@@ -5,7 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
 var passport = require('passport');
-const ensureLoggedIn = require('./config/ensureLoggedIn')
+const ensureLoggedIn = require('./config/ensureLoggedIn');
+const methodOverride = require('method-override');
 
 
 
@@ -30,6 +31,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method'));
 
 app.use(session({
   secret: process.env.SECRET,

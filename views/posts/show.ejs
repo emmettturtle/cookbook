@@ -6,6 +6,12 @@
 <br><br>
 <div class="description"><%= post.description %></div>
 
+<% if (user?._id.equals(post.user)) { %>
+    <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+        <button type="submit">delete post</button>
+    </form>
+<% } %>
+
 <br><br>
 <h3>Comments</h3>
 <% if(post.comments){ %>
