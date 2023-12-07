@@ -1,11 +1,11 @@
-const Posts = require('../models/post');
+const Post = require('../models/post');
 
 module.exports = {
     create
 }
 
 async function create(req, res) {
-    const post = await Posts.findById(req.params.id);
+    const post = await Post.findById(req.params.id);
     req.body.user = req.user._id;
     req.body.userName = req.user.name;
     req.body.userAvatar = req.user.avatar;
