@@ -1,9 +1,11 @@
 <%- include('../partials/header') %>
 
-<form id="new-post" action="/posts" method="POST">
-    <label>Description:</label>
-    <input type="text" name="description">
-    <input type="submit" value="Create Post">
+<form id="new-post" action="/posts" method="POST" class="create-form">
+    <div class="input-group">
+        <label class="create-label">Description:</label>
+        <textarea name="description" class="create-input"></textarea>
+    </div>
+    <input type="submit" value="Create Post" class="create-submit">
 </form>
 
 

@@ -1,20 +1,20 @@
 <%- include('../partials/header') %>
 
-<br><br>
-<div class="profile-page-user-info"><img alt="avatar" src="<%= pageUser.avatar %>" referrerpolicy="no-referrer" ><%= pageUser.name %></div>
-<br><br>
-<% if(userPosts) { %>
-    <% userPosts.forEach(function(post) { %>
+<div class="user-page-container">
+    <div class="profile-page-user-info"><img alt="avatar" src="<%= pageUser.avatar %>" referrerpolicy="no-referrer" ><%= pageUser.name %></div>
+    <% if(userPosts) { %>
         <div class="profile-posts">
-            <img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Post image">
-            <br><br>
-            <a href="/posts/<%= post._id %>">SEE DETAILS</a>
+        <% userPosts.forEach(function(post) { %>
+            <a href="/posts/<%= post._id %>">
+                <img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Post image">
+            </a>
+        <% }) %>
         </div>
-        <br>
-    <% }) %>
-<% } else { %>
-    <h5>no posts yet</h5>
-<% } %>
+    <% } else { %>
+        <h5>no posts yet</h5>
+    <% } %>
+</div>
+
 
 
 <%- include('../partials/footer') %>

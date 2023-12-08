@@ -1,8 +1,232 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 100%; */
+  margin: 0;
+  background: linear-gradient(to left, rgba(85, 85, 85, 0.6), rgba(101, 60, 236, 0.6));  backdrop-filter: blur(10px);
+  /* height: 100vh; */
+  width: 100%;
+  padding-top: 50px; 
+
 }
 
-a {
-  color: #00B7FF;
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  color: white;
+  font-family: 'Lilita One', sans-serif;
+  margin: 5px;
+  margin-left: 25px;
+  font-size: 40px; /* Adjust this value to match the size of the nav buttons */
+  font-weight: normal; /* Makes the font less bold */
+}
+
+.navbar .nav-links {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  padding: 10px 20px; /* Added padding for sleeker look */
+  border-radius: 5px; /* Added border radius for sleeker look */
+  transition: background-color 0.3s; /* Added transition for smooth color change */
+  background-color: rgb(101, 60, 236); /* Vibrant purple */
+}
+
+.navbar a:hover {
+  background-color: rgb(81, 40, 216); /* Darker purple on hover */
+}
+
+.navbar .auth-links {
+  order: 2;
+}
+
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 75px; /* Add a top margin to move the posts down */
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  background-color: #333; /* Match the navbar background color */
+  color: white;
+  width: 150%; /* Increase this to make the posts wider */
+  max-width: 800px; /* Maximum width of the post */
+  margin-bottom: 40px; /* Space between posts */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  font-size: 15px;
+}
+
+.post img {
+  width: 100%;
+  height: auto;
+}
+
+.post-user-info, a {
+  padding: 15px;
+  text-align: center;
+}
+
+.post-user-info {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  padding-left: 20px;
+  margin-bottom: 0px; /* Reduce this to reduce space below the user info */
+}
+
+.post-user-info .username {
+  margin-left: 20px;
+}
+
+.post-user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.post img {
+  margin-top: 0px; /* Reduce this to reduce space above the post image */
+}
+
+.description {
+  padding: 15px;
+  text-align: left; /* Align text to the left */
+}
+
+.post a {
+  color: white;
+  background-color: rgb(101, 60, 236);
+  text-decoration: none;
+  padding: 10px 0;
+  margin-top: auto;
+  width: 100%;
+  display: block;
+  text-transform: uppercase;
+}
+
+.post a:hover {
+  background-color: rgb(81, 40, 216); /* Darker purple on hover */
+}
+
+
+/* CREATE PAGE  */
+
+.create-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333; /* Match the navbar background color */
+  color: white; /* Match the navbar text color */
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 200px;
+}
+
+.create-label {
+  margin-bottom: 10px;
+}
+
+.create-input, .create-submit {
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.create-input {
+  width: 80%;
+}
+
+.create-submit {
+  background-color: rgb(101, 60, 236); /* Match the navbar link background color */
+  color: white;
+  cursor: pointer;
+}
+
+.user-page-container {
+  background-color: #333; /* Dark gray background */
+  color: white; /* White text */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 1200px; /* Adjust as needed */
+  margin-top: 60px;
+}
+
+.profile-page-user-info {
+  flex-direction: row; /* Align items horizontally */
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  background-color: #333; /* Match the navbar background color */
+  color: white; /* Match the navbar text color */
+  font-size: 40px;
+  padding: 20px;
+}
+
+.profile-page-user-info img {
+  border-radius: 50%; /* Make the image a circle */
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  object-fit: cover; /* Ensure the image covers the entire area without distortion */
+  margin-right: 15px;
+}
+
+.profile-posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Add some space between the posts */
+}
+
+.profile-posts {
+  width: 100%; /* Make the posts smaller */
+  /* Add other styles as needed */
+  border-radius: 10px; 
+}
+
+.profile-posts img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; 
+  margin: 0px;
+  padding: 0px;
+}
+
+.profile-posts a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Add this line */
+  gap: 20px; /* Add some space between the posts */
+  width: 60%; /* Make the posts smaller */
+
 }
