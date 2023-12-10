@@ -3,7 +3,7 @@
 <div class="post-user-info"><img alt="avatar" src="<%= post.userAvatar %>" referrerpolicy="no-referrer" ><%= post.userName %></div>
 <a href="/users/<%= post.user._id %>">View Profile</a>
 <br><br>
-<img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Post image">
+<img src= <%= post.imageUrl %> alt="Post image">
 <br>
 <% if(user) { %>
     <form action="/posts/<%= post._id %>?_method=PUT" method="POST">

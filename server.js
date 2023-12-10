@@ -9,7 +9,6 @@ const ensureLoggedIn = require('./config/ensureLoggedIn');
 const methodOverride = require('method-override');
 
 
-
 require('dotenv').config();
 // connect to the database with AFTER the config vars are processed
 require('./config/database');

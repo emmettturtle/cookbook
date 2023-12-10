@@ -1,4 +1,5 @@
 const Post = require('../models/post');
+const OpenAI = require('openai');
 
 module.exports = {
     index,
@@ -39,6 +40,15 @@ async function create(req, res) {
     req.body.user = req.user._id;
     req.body.userName = req.user.name;
     req.body.userAvatar = req.user.avatar;
+
+    
+    const openai = new OpenAI({ apiKey: process.env.OPENAI_KEY });
+
+    const image = await openai.images.generate({model: 'dall-e-2', prompt: req.body.description});
+    // image_url = response.data.data[0].url;
+    // console.log(image.data);
+    req.body.imageUrl = image.data[0].url;
+    
     try {
         const post = await Post.create(req.body);
         res.redirect('/posts');

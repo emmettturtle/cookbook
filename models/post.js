@@ -21,6 +21,7 @@ const commentSchema = new Schema({
 const postSchema = new Schema({
     description: { type: String },
     comments: [commentSchema],
+    imageUrl: String,
     usersLiked: [{
         type: Schema.Types.ObjectId,
         ref: 'User'
