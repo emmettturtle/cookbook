@@ -230,3 +230,204 @@ body {
   width: 60%; /* Make the posts smaller */
 
 }
+
+/* Profile show page */
+
+.show-container {
+  padding: 20px;
+  margin-top: 75px; /* Add a top margin to move the posts down */
+  display: flex;
+  flex-direction: column;
+  background-color: #333; /* Match the navbar background color */
+  color: white;
+  width: 150%; /* Increase this to make the posts wider */
+  max-width: 800px; /* Maximum width of the post */
+  margin-bottom: 40px; /* Space between posts */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.show-container a .post-user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-left: -10px;
+  font-size: 25px;
+  color: white;
+}
+
+.show-container a .post-user-info img {
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 65px;
+  height: 65px;
+}
+
+.show-container .post-image {
+  width: 10%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.show-container .show-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  /* flex-direction: row-reverse; Reverse the order of the buttons */
+}
+
+.like, .unlike {
+  order: 1; /* Move the like/dislike button to the left */
+}
+
+.delete {
+  order: 2; /* Move the delete button to the right */
+}
+
+.like, .unlike, .delete {
+  background-color: rgb(101, 60, 236); /* Make the buttons purple */
+  color: white; /* Make the text white */
+  border: none; /* Remove the border */
+  padding: 10px 20px; /* Add some padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px; /* Round the edges */
+  transition: background-color 0.3s ease; /* Add a transition */
+}
+
+.like:hover, .unlike:hover, .delete:hover {
+  background-color: rgb(81, 40, 216); /* Darken the buttons when hovered */
+}
+
+.show-container .description {
+  font-size: 18px; /* Make the text a little larger */
+  text-align: left; /* Align the text to the left */
+  margin-top: 20px; /* Add some space above the description */
+}
+
+.show-container .comment {
+  background-color:  #1a1a1a;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.show-container .comment-user-info {
+  display: flex;
+  align-items: center;
+  padding-bottom: -4px;
+}
+
+.show-container .comment-user-info img {
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 30px; /* Make the image smaller */
+  height: 30px; /* Make the image smaller */
+}
+
+#add-comment-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#add-comment-form label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#add-comment-form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  resize: vertical; /* Allow vertical resizing */
+}
+
+#add-comment-form .post-comment {
+  background-color: rgb(101, 60, 236);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+#add-comment-form .post-comment:hover {
+  background-color: rgb(81, 40, 216);
+}
+
+/* Search Profiles Page */
+
+.search-container {
+  background-color:  #333;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 100px;
+  color: white;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-form input[type="text"] {
+  flex-grow: 1;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.search-form button {
+  background-color:  rgb(101, 60, 236);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+  background-color: rgb(81, 40, 216);
+}
+
+.search-results a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.search-results .profile-page-user-info {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.search-results .profile-page-user-info img {
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}

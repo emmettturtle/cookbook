@@ -63,6 +63,9 @@ function newPost(req, res) {
 }
 
 async function index(req, res) {
-    const posts = await Post.find({});
+    let posts = await Post.find({});
+    if (posts) {
+        posts = posts.reverse();
+    }
     res.render('posts/index', { title: 'Feed', posts });
 }

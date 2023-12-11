@@ -1,51 +1,57 @@
 <%- include('../partials/header') %>
-
-<div class="post-user-info"><img alt="avatar" src="<%= post.userAvatar %>" referrerpolicy="no-referrer" ><%= post.userName %></div>
-<a href="/users/<%= post.user._id %>">View Profile</a>
-<br><br>
-<img src= <%= post.imageUrl %> alt="Post image">
-<br>
-<% if(user) { %>
-    <form action="/posts/<%= post._id %>?_method=PUT" method="POST">
-        <% if(post.usersLiked.some(userId => userId.equals(user._id))) {%>
-            <button type="submit">DISLIKE</button>
-        <% } else { %>
-            <button type="submit">LIKE</button>
+<div class="show-container">
+    <a href="/users/<%= post.user._id %>">
+        <div class="post-user-info"><img alt="avatar" src="<%= post.userAvatar %>" referrerpolicy="no-referrer" ><%= post.userName %></div>
+    </a>
+    <br>
+    <img class="post-img" src= <%= post.imageUrl %> alt="Post image">
+    <br>
+    <div class="show-buttons">
+        <% if(user) { %>
+            <form action="/posts/<%= post._id %>?_method=PUT" method="POST">
+                <% if(post.usersLiked.some(userId => userId.equals(user._id))) {%>
+                    <button class="unlike" type="submit">Unlike</button>
+    
+                <% } else { %>
+                    <button class="like" type="submit">Like</button>
+                <% } %>
+            </form>
         <% } %>
-    </form>
-<% } %>
-<br>
-<div class="description"><%= post.description %></div>
+    
+        <% if (user?._id.equals(post.user)) { %>
+            <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+                <button class="delete" type="submit">Delete Post</button>
+            </form>
+        <% } %>
+    </div>
 
+    <div class="description"><%= post.description %></div>
+    
+    
 
-<% if (user?._id.equals(post.user)) { %>
-    <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
-        <button type="submit">delete post</button>
-    </form>
-<% } %>
-
-<br><br>
-<h3>Comments</h3>
-<% if(post.comments){ %>
-    <% post.comments.forEach(function(comment){ %>
-        <div class = 'comment'>
-            <div class="comment-user-info"><img alt="avatar" src="<%= comment.userAvatar %>" referrerpolicy="no-referrer" ><%= comment.userName %></div>
+    
+    <br><br>
+    <h3>Comments</h3>
+    <% if(post.comments){ %>
+        <% post.comments.forEach(function(comment){ %>
+            <div class = 'comment'>
+                <div class="comment-user-info"><img alt="avatar" src="<%= comment.userAvatar %>" referrerpolicy="no-referrer" ><%= comment.userName %></div>
+                <p><%= comment.content %></p>
+            </div>
             <br>
-            <p><%= comment.content %></p>
-        </div>
-        <br><br>
-    <%  }); %>
-<% } else { %>
-    <h5>no comments yet</h5>
-<% } %>
-
-<% if (user) { %>
-    <form id="add-comment-form" method="POST" action="/posts/<%= post._id %>/comments">
-        <label>Comment:</label>
-        <textarea name="content"></textarea>
-        <input type="submit" value="Post Comment">
-    </form>
-<% } %>
+        <%  }); %>
+    <% } else { %>
+        <h5>no comments yet</h5>
+    <% } %>
+    
+    <% if (user) { %>
+        <form id="add-comment-form" method="POST" action="/posts/<%= post._id %>/comments">
+            <label>Comment:</label>
+            <textarea name="content"></textarea>
+            <input class="post-comment" type="submit" value="Post Comment">
+        </form>
+    <% } %>
+</div>
 
 
 <%- include('../partials/footer') %>
