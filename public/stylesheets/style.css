@@ -3,10 +3,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* min-height: 100%; */
   margin: 0;
   background: linear-gradient(to left, rgba(85, 85, 85, 0.6), rgba(101, 60, 236, 0.6));  backdrop-filter: blur(10px);
-  /* height: 100vh; */
   width: 100%;
   padding-top: 50px; 
 
@@ -30,8 +28,8 @@ body {
   font-family: 'Lilita One', sans-serif;
   margin: 5px;
   margin-left: 25px;
-  font-size: 40px; /* Adjust this value to match the size of the nav buttons */
-  font-weight: normal; /* Makes the font less bold */
+  font-size: 40px; 
+  font-weight: normal; 
 }
 
 .navbar .nav-links {
@@ -44,10 +42,10 @@ body {
   color: white;
   text-decoration: none;
   margin: 0 20px;
-  padding: 10px 20px; /* Added padding for sleeker look */
-  border-radius: 5px; /* Added border radius for sleeker look */
-  transition: background-color 0.3s; /* Added transition for smooth color change */
-  background-color: rgb(101, 60, 236); /* Vibrant purple */
+  padding: 10px 20px; 
+  border-radius: 5px;
+  transition: background-color 0.3s; 
+  background-color: rgb(101, 60, 236); 
 }
 
 .navbar a:hover {
@@ -63,17 +61,17 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  margin-top: 75px; /* Add a top margin to move the posts down */
+  margin-top: 75px; 
 }
 
 .post {
   display: flex;
   flex-direction: column;
-  background-color: #333; /* Match the navbar background color */
+  background-color: #333; 
   color: white;
-  width: 150%; /* Increase this to make the posts wider */
-  max-width: 800px; /* Maximum width of the post */
-  margin-bottom: 40px; /* Space between posts */
+  width: 100%; 
+  max-width: 800px; 
+  margin-bottom: 40px; 
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -96,7 +94,7 @@ body {
   width: 100%;
   padding: 15px;
   padding-left: 20px;
-  margin-bottom: 0px; /* Reduce this to reduce space below the user info */
+  margin-bottom: 0px; 
 }
 
 .post-user-info .username {
@@ -112,12 +110,12 @@ body {
 }
 
 .post img {
-  margin-top: 0px; /* Reduce this to reduce space above the post image */
+  margin-top: 0px;
 }
 
 .description {
   padding: 15px;
-  text-align: left; /* Align text to the left */
+  text-align: left; 
 }
 
 .post a {
@@ -142,8 +140,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #333; /* Match the navbar background color */
-  color: white; /* Match the navbar text color */
+  background-color: #333; 
+  color: white;
   padding: 20px;
   border-radius: 10px;
   margin-top: 200px;
@@ -165,38 +163,37 @@ body {
 }
 
 .create-submit {
-  background-color: rgb(101, 60, 236); /* Match the navbar link background color */
+  background-color: rgb(101, 60, 236); 
   color: white;
   cursor: pointer;
 }
 
 .user-page-container {
-  background-color: #333; /* Dark gray background */
-  color: white; /* White text */
+  background-color: #333; 
+  color: white;
   padding: 20px;
   border-radius: 10px;
   margin: 20px auto;
-  max-width: 1200px; /* Adjust as needed */
+  max-width: 1200px; 
   margin-top: 60px;
 }
 
 .profile-page-user-info {
-  flex-direction: row; /* Align items horizontally */
+  flex-direction: row;
   justify-content: flex-start;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
-  background-color: #333; /* Match the navbar background color */
-  color: white; /* Match the navbar text color */
+  background-color: #333;
+  color: white;
   font-size: 40px;
   padding: 20px;
 }
 
 .profile-page-user-info img {
-  border-radius: 50%; /* Make the image a circle */
-  width: 100px; /* Adjust as needed */
-  height: 100px; /* Adjust as needed */
-  object-fit: cover; /* Ensure the image covers the entire area without distortion */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px; 
+  object-fit: cover; 
   margin-right: 15px;
 }
 
@@ -204,12 +201,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px; /* Add some space between the posts */
+  gap: 20px; 
 }
 
 .profile-posts {
-  width: 100%; /* Make the posts smaller */
-  /* Add other styles as needed */
+  width: 100%; 
   border-radius: 10px; 
 }
 
@@ -225,9 +221,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Add this line */
-  gap: 20px; /* Add some space between the posts */
-  width: 60%; /* Make the posts smaller */
+  justify-content: center; 
+  gap: 20px; 
+  width: 60%; 
 
 }
 
@@ -235,14 +231,14 @@ body {
 
 .show-container {
   padding: 20px;
-  margin-top: 75px; /* Add a top margin to move the posts down */
+  margin-top: 75px;
   display: flex;
   flex-direction: column;
-  background-color: #333; /* Match the navbar background color */
+  background-color: #333; 
   color: white;
-  width: 150%; /* Increase this to make the posts wider */
-  max-width: 800px; /* Maximum width of the post */
-  margin-bottom: 40px; /* Space between posts */
+  width: 150%; 
+  max-width: 800px; 
+  margin-bottom: 40px; 
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -279,40 +275,39 @@ a {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-  /* flex-direction: row-reverse; Reverse the order of the buttons */
 }
 
 .like, .unlike {
-  order: 1; /* Move the like/dislike button to the left */
+  order: 1; 
 }
 
 .delete {
-  order: 2; /* Move the delete button to the right */
+  order: 2; 
 }
 
 .like, .unlike, .delete {
-  background-color: rgb(101, 60, 236); /* Make the buttons purple */
-  color: white; /* Make the text white */
-  border: none; /* Remove the border */
-  padding: 10px 20px; /* Add some padding */
+  background-color: rgb(101, 60, 236); 
+  color: white; 
+  border: none;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 12px; /* Round the edges */
-  transition: background-color 0.3s ease; /* Add a transition */
+  border-radius: 12px; 
+  transition: background-color 0.3s ease;
 }
 
 .like:hover, .unlike:hover, .delete:hover {
-  background-color: rgb(81, 40, 216); /* Darken the buttons when hovered */
+  background-color: rgb(81, 40, 216);
 }
 
 .show-container .description {
-  font-size: 18px; /* Make the text a little larger */
-  text-align: left; /* Align the text to the left */
-  margin-top: 20px; /* Add some space above the description */
+  font-size: 18px; 
+  text-align: left;
+  margin-top: 20px;
 }
 
 .show-container .comment {
@@ -331,8 +326,8 @@ a {
 .show-container .comment-user-info img {
   border-radius: 50%;
   margin-right: 10px;
-  width: 30px; /* Make the image smaller */
-  height: 30px; /* Make the image smaller */
+  width: 30px;
+  height: 30px;
 }
 
 #add-comment-form {
@@ -352,7 +347,7 @@ a {
   border-radius: 5px;
   border: 1px solid #ccc;
   margin-bottom: 10px;
-  resize: vertical; /* Allow vertical resizing */
+  resize: vertical; 
 }
 
 #add-comment-form .post-comment {
