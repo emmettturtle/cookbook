@@ -3,6 +3,13 @@
 ## Overview
 This project is a social media platform centered around sharing food you have cooked. In this initial iteration of Cookbook there is full RESTful architecture and ability to CRUD data as a user. Users login with Google's OAuth and their avatar and username is displayed appropriately throughout the app. I stress that this is only the first iteration of this application. In future iterations I plan to greatly increase mobile functionality and maybe even make it an app. I will utilize technologies that I have not learned yet like REACT and AWS databases- which has held me from implementing a pretty key functionality: the ability for users to upload images. So I decided I would practice implementing an API and use the Open AI API to generate images of food based off the users description. This is definitely a cool and entertaining feature, but generally the food looks at best a little weird and at worst nauseating. So for now the image generation is a fun little feature but definitely not one that will be sticking around. 
 
+
+#### Technologies Used
+> This project used node.js, mongoDB, express, ejs, and css technologies.
+>
+> APIs used: Google OAuth and Open AI Dall-E image generation
+
+
 ## App Walkthrough
 Below are screenshots of CookBook, walking through some of the features. 
 
@@ -25,12 +32,6 @@ This is the page a user is shown to create a post. It is pretty bare right now b
 
 ![Imgur](https://i.imgur.com/IYNdpky.png)
 This is the search page where a user can search for another user and any matching results will be shown. When clicked, the result will take the user to the searched profile page. 
-
-
-#### Technologies Used
-> This project used node.js, mongoDB, express, ejs, and css technologies.
->
-> APIs used: Google OAuth and Open AI Dall-E image generation
 
 
 ## Getting Started
