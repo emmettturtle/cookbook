@@ -20,7 +20,7 @@ When SEE DETAILS on a post is clicked a page showing the user, description, like
 ![Imgur](https://imgur.com/foy82k8)
 This shows a user's profile page which consists of their username and avatar at the top and a collection of pictures of their posts that once being clicked will bring you to the post's show page. 
 
-![Imgur](https://imgur.com/Rairq9N)
+![Imgur](https://i.imgur.com/Rairq9N.png)
 This is the page a user is shown to create a post. It is pretty bare right now because the only data we need the user to enter is the image description, which will then be used to generate an image. 
 
 ![Imgur](https://imgur.com/IYNdpky)
