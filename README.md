@@ -7,23 +7,23 @@ This project is a social media platform centered around sharing food you have co
 Below are screenshots of CookBook, walking through some of the features. 
 
 
-![Imgur](https://imgur.com/BjVkOfS)
+![Imgur](https://i.imgur.com/BjVkOfS.png)
 New users will load onto this homepage where before logging in they can view the chronological feed of posts. No other features are available until they login. 
 
-![Imgur](https://imgur.com/Vpa2pg2)
+![Imgur](https://i.imgur.com/Vpa2pg2.png)
 Once using Google's OAuth to login the user will be shown the homepage with the same feed but updated nav bar options. They can create a post, view their profile, find other user profiles, or logout. 
 
-![Imgur](https://imgur.com/UbmWE2t)
-![Imgur](https://imgur.com/Q5YBdHG)
+![Imgur](https://i.imgur.com/UbmWE2t.png)
+![Imgur](https://i.imgur.com/Q5YBdHG.png)
 When SEE DETAILS on a post is clicked a page showing the user, description, like/unlike buttons, comments, a form to add new comments and a delete button that appears when the post being viewed was created by the viewing user. A user can also view the poster's profile by clicking on their name at the top. 
 
-![Imgur](https://imgur.com/foy82k8)
+![Imgur](https://i.imgur.com/foy82k8.png)
 This shows a user's profile page which consists of their username and avatar at the top and a collection of pictures of their posts that once being clicked will bring you to the post's show page. 
 
 ![Imgur](https://i.imgur.com/Rairq9N.png)
 This is the page a user is shown to create a post. It is pretty bare right now because the only data we need the user to enter is the image description, which will then be used to generate an image. 
 
-![Imgur](https://imgur.com/IYNdpky)
+![Imgur](https://i.imgur.com/IYNdpky.png)
 This is the search page where a user can search for another user and any matching results will be shown. When clicked, the result will take the user to the searched profile page. 
 
 
